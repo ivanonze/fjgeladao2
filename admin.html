@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - FJ Geladão</title>
+    <link rel="stylesheet" href="src/css/stilo.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header Simplificado para a Área Admin -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-shield-alt"></i> FJ Geladão - Área Administrativa</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Ver Site</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Pedidos Section -->
+    <section id="pedidos" class="pedidos">
+        <div class="container">
+            <h2>Controle de Pedidos</h2>
+
+            <!-- Login Admin -->
+            <div id="admin-login" class="admin-login">
+                <div class="login-form">
+                    <h3><i class="fas fa-lock"></i> Acesso Administrativo</h3>
+                    <input type="password" id="admin-password" placeholder="Digite a senha de administrador">
+                    <button id="btn-login" class="btn-primary">Entrar</button>
+                </div>
+            </div>
+
+            <!-- Painel de Controle (oculto inicialmente) -->
+            <div id="admin-panel" class="admin-panel" style="display: none;">
+                <div class="panel-header">
+                    <h3><i class="fas fa-clipboard-list"></i> Painel de Controle de Pedidos</h3>
+                    <button id="btn-logout" class="btn-secondary">Sair</button>
+                </div>
+
+                <!-- Estatísticas -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <i class="fas fa-shopping-bag"></i>
+                        <div class="stat-info">
+                            <h4>Total de Pedidos</h4>
+                            <span id="total-pedidos">0</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-clock"></i>
+                        <div class="stat-info">
+                            <h4>Pedidos Pendentes</h4>
+                            <span id="pedidos-pendentes">0</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-check-circle"></i>
+                        <div class="stat-info">
+                            <h4>Pedidos Concluídos</h4>
+                            <span id="pedidos-concluidos">0</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-dollar-sign"></i>
+                        <div class="stat-info">
+                            <h4>Faturamento Hoje</h4>
+                            <span id="faturamento-hoje">R$ 0,00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filtros de Pedidos -->
+                <div class="pedidos-filtros">
+                    <button class="filtro-pedido-btn active" data-status="todos">Todos</button>
+                    <button class="filtro-pedido-btn" data-status="pendente">Pendentes</button>
+                    <button class="filtro-pedido-btn" data-status="preparando">Preparando</button>
+                    <button class="filtro-pedido-btn" data-status="pronto">Prontos</button>
+                    <button class="filtro-pedido-btn" data-status="entregue">Entregues</button>
+                </div>
+
+                <!-- Filtros de Data e Ações -->
+                <div class="admin-controls">
+                    <div class="date-filters">
+                        <h4><i class="fas fa-calendar-alt"></i> Filtrar por Data</h4>
+                        <div class="date-inputs">
+                            <div class="date-group">
+                                <label for="data-inicio">Data Início:</label>
+                                <input type="date" id="data-inicio">
+                            </div>
+                            <div class="date-group">
+                                <label for="data-fim">Data Fim:</label>
+                                <input type="date" id="data-fim">
+                            </div>
+                            <button id="btn-filtrar-data" class="btn-filter">Filtrar</button>
+                            <button id="btn-limpar-filtro" class="btn-clear">Limpar</button>
+                        </div>
+                        <div class="quick-filters">
+                            <button class="quick-filter-btn" data-period="hoje">Hoje</button>
+                            <button class="quick-filter-btn" data-period="semana">Esta Semana</button>
+                            <button class="quick-filter-btn" data-period="mes">Este Mês</button>
+                        </div>
+                    </div>
+
+                    <div class="admin-actions">
+                        <label style="display: flex; align-items: center; margin-right: 10px; cursor: pointer;">
+                            <input type="checkbox" id="checkbox-marcar-todos" style="margin-right: 5px;">
+                            Marcar Todos
+                        </label>
+                        <button id="btn-gerenciar-produtos" class="btn-primary">
+                            <i class="fas fa-box"></i> Gerenciar Produtos
+                        </button>
+                        <button id="btn-zerar-pedido" class="btn-warning">
+                            <i class="fas fa-plus-circle"></i> Adicionar Pedido
+                        </button>
+
+                        <!-- Modal para adicionar pedido com produto e valor -->
+                        <div id="modal-adicionar-pedido" class="modal" style="display:none;">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3>Adicionar Pedido</h3>
+                                    <span class="close" id="close-modal-adicionar-pedido">&times;</span>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="form-adicionar-pedido" novalidate>
+                                        <input type="hidden" id="pedido-edit-id">
+                                        <div class="form-group">
+                                            <label for="pedido-cliente">Nome do Cliente:</label>
+                                            <input type="text" id="pedido-cliente" name="pedido-cliente" placeholder="Opcional (padrão: Venda Balcão)" />
+                                        </div>
+
+                                        <h4 style="margin-top: 20px; margin-bottom: 10px;">Itens do Pedido</h4>
+                                        <div id="itens-pedido-manual">
+                                            <!-- Linha de item modelo -->
+                                            <div class="item-manual-group" style="display: flex; align-items: flex-end; gap: 10px; margin-bottom: 10px;">
+                                                <div class="form-group" style="flex-grow: 1; margin-bottom: 0;">
+                                                    <label>Produto:</label>
+                                                    <input type="text" class="pedido-produto-manual" list="produtos-sugestoes" />
+                                                </div>
+                                                <div class="form-group" style="width: 80px; margin-bottom: 0;">
+                                                    <label>Qtd:</label>
+                                                    <input type="number" class="pedido-qtd-manual" min="1" value="1" />
+                                                </div>
+                                                <div class="form-group" style="margin-bottom: 0;">
+                                                    <label>Valor (R$):</label>
+                                                    <input type="number" class="pedido-valor-manual" step="0.01" min="0" />
+                                                </div>
+                                                <button type="button" class="btn-remover-item-manual" style="height: 40px; width: 40px; background: #e74c3c; color: white; border: none; border-radius: 5px; cursor: pointer; display: none; font-size: 1.2rem;">&times;</button>
+                                            </div>
+                                        </div>
+
+                                        <button type="button" id="btn-adicionar-item-manual" class="btn-secondary" style="margin-top: 10px; margin-bottom: 20px;"><i class="fas fa-plus"></i> Adicionar outro item</button>
+                                        
+                                        <div class="manual-order-total" style="text-align: right; font-size: 1.2rem; font-weight: bold; margin: 15px 0; border-top: 1px solid #eee; padding-top: 15px;">
+                                            Total do Pedido: 
+                                            <span id="manual-order-total-value">R$ 0,00</span>
+                                        </div>
+                                        
+                                        <button type="submit" class="btn-primary">Adicionar Pedido</button>
+                                    </form>
+                                    <datalist id="produtos-sugestoes">
+                                        <!-- Opções de produtos serão carregadas aqui via JS -->
+                                    </datalist>
+                                </div>
+                            </div>
+                        </div>
+                        <button id="btn-limpar-pedidos" class="btn-danger" style="margin-left: 10px;">
+                            <i class="fas fa-trash-alt"></i> Limpar Pedidos
+                        </button>
+                        <button id="btn-exportar-csv" class="btn-success">
+                            <i class="fas fa-download"></i> Exportar CSV
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Lista de Pedidos -->
+                <div class="pedidos-lista" id="pedidos-lista">
+                    <div class="pedido-vazio">
+                        <i class="fas fa-inbox"></i>
+                        <p>Nenhum pedido encontrado</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Gerenciamento de Produtos -->
+    <div id="produtos-modal" class="modal">
+        <div class="modal-content produtos-modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-box"></i> Gerenciar Produtos</h3>
+                <span class="close" id="close-produtos-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <!-- Tabs -->
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="adicionar">
+                        <i class="fas fa-plus"></i> Adicionar Produto
+                    </button>
+                    <button class="tab-btn" data-tab="editar">
+                        <i class="fas fa-edit"></i> Editar Produtos
+                    </button>
+                </div>
+
+                <!-- Tab Adicionar Produto -->
+                <div id="tab-adicionar" class="tab-content active">
+                    <form id="form-adicionar-produto">
+                        <div class="form-group">
+                            <label for="produto-nome">Nome do Produto *</label>
+                            <input type="text" id="produto-nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="produto-preco">Preço *</label>
+                            <input type="number" id="produto-preco" step="0.01" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="produto-categoria">Categoria *</label>
+                            <select id="produto-categoria" required>
+                                <option value="">Selecione uma categoria</option>
+                                <option value="refrigerantes">Refrigerantes</option>
+                                <option value="cervejas">Cervejas</option>
+                                <option value="aguas">Águas</option>
+                                <option value="sucos">Sucos</option>
+                                <option value="energeticos">Energéticos</option>
+                                <option value="destilados">Destilados</option>
+                                <option value="vinhos">Vinhos</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="produto-imagem">URL da Imagem (opcional)</label>
+                            <input type="url" id="produto-imagem">
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-plus"></i> Adicionar Produto
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Tab Editar Produtos -->
+                <div id="tab-editar" class="tab-content">
+                    <div class="search-container">
+                        <input type="text" id="search-produto" placeholder="Buscar produto...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div id="lista-produtos-edit" class="produtos-edit-list">
+                        <!-- Lista será carregada dinamicamente -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Elemento de áudio para notificação de novos pedidos -->
+    <audio id="notification-sound" preload="auto">
+        <source src="src/audio/notification.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+    <script src="src/js/admin.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geladão - Bebidas Geladas</title>
+    <link rel="stylesheet" href="src/css/stilo.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="src/image/510305951_18052089899597905_1888439041580206738_n.jpg" alt="FJ Geladão Logo"
+                    style="height: 50px; width: auto; margin-right: 10px;">
+                <h1>FJ Geladão</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li> 
+                    
+                </ul>
+            </nav>
+            <div class="carrinho">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="carrinho-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <!-- Banner Promocional -->
+        <div class="banner-promocional">
+            <div class="container">
+                <div class="banner-content">
+                    <i class="fas fa-fire"></i>
+                    <div class="banner-text">
+                        <strong>🥩 NOVIDADE EM BREVE!</strong>
+                        <span>Carnes para churrasco chegando no FJ Geladão! Prepare-se para os melhores cortes da
+                            região!</span>
+                    </div>
+                    <i class="fas fa-fire"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-content">
+            <h2>Bebidas Sempre Geladas!</h2>
+            <p>As melhores bebidas da região, sempre na temperatura ideal</p>
+            <button class="btn-primary">Ver Produtos</button>
+        </div>
+        <div class="hero-image">
+            <img src="src/image/510305951_18052089899597905_1888439041580206738_n.jpg" alt="FJ Geladão"
+                style="max-width: 300px; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+        </div>
+    </section>
+
+    <!-- Produtos Section -->
+    <section id="produtos" class="produtos">
+        <div class="container">
+            <h2>Nossos Produtos</h2>
+            <div class="filtros">
+                <button class="filtro-btn active" data-categoria="todos">Todos</button>
+                <button class="filtro-btn" data-categoria="refrigerantes">Refrigerantes</button>
+                <button class="filtro-btn" data-categoria="cervejas">Cervejas</button>
+                <button class="filtro-btn" data-categoria="aguas">Águas</button>
+                <button class="filtro-btn" data-categoria="sucos">Sucos</button>
+                <button class="filtro-btn" data-categoria="energeticos">Energéticos</button>
+                <button class="filtro-btn" data-categoria="destilados">Destilados</button>
+                <button class="filtro-btn" data-categoria="vinhos">Vinhos</button>
+                <button class="filtro-btn" data-categoria="outros">Outros</button>
+            </div>
+
+            <div class="produtos-grid">
+                <!-- Refrigerantes -->
+                <div class="produto-card" data-categoria="refrigerantes">
+                    <div class="produto-image">
+                        <img src="src/image/168673-1200-auto.webp" alt="Coca-Cola Pet 1L">
+                    </div>
+                    <h3>Coca-Cola Pet 1L</h3>
+                    <p class="preco">R$ 8,50</p>
+                    <button class="btn-comprar" data-produto="Coca-Cola Pet 1L" data-preco="8.50">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <div class="produto-card" data-categoria="refrigerantes">
+                    <div class="produto-image">
+                        <img src="src/image/168867-1200-auto.webp" alt="Pepsi Pet L1">
+                    </div>
+                    <h3>Pepsi Pet 1L</h3>
+                    <p class="preco">R$ 7,00</p>
+                    <button class="btn-comprar" data-produto="Pepsi Pet 1L" data-preco="7.00">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <div class="produto-card" data-categoria="refrigerantes">
+                    <div class="produto-image">
+                        <img src="src/image/168930-1200-auto.webp" alt="Guaraná Antarctica 1L">
+                    </div>
+                    <h3>Guaraná Pet 1L</h3>
+                    <p class="preco">R$ 7,00</p>
+                    <button class="btn-comprar" data-produto="Guaraná Pet 1L" data-preco="7.00">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+                <!-- Novos Refrigerantes -->
+                <div class="produto-card" data-categoria="refrigerantes">
+                    <div class="produto-image">
+                        <img src="src/image/184447-1200-auto.webp" alt="Coca-Cola 2L">
+                    </div>
+                    <h3>Coca-Cola 2L</h3>
+                    <p class="preco">R$ 13,00</p>
+                    <button class="btn-comprar" data-produto="Coca-Cola 2L" data-preco="13.00">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <div class="produto-card" data-categoria="refrigerantes">
+                    <div class="produto-image">
+                        <img src="src/image/210692-1200-auto.webp" alt="Coca-Cola Lata 350">
+                    </div>
+                    <h3>Coca-Cola Lata</h3>
+                    <p class="preco">R$ 5,00</p>
+                    <button class="btn-comprar" data-produto="Coca-Cola Lata" data-preco="5.00">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <div class="produto-card" data-categoria="refrigerantes">
+                    <div class="produto-image">
+                        <img src="src/image/179006-1600-auto.webp" alt="">
+                    </div>
+                    <h3>Guaraná 2L</h3>
+                    <p class="preco">R$ 11,00</p>
+                    <button class="btn-comprar" data-produto="Guaraná 2L" data-preco="11.00">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+                <div class="produto-card" data-categoria="refrigerantes">
+                    <div class="produto-image">
+                        <img src="src/image/168710-1200-auto.webp" alt="Guaraná Lata">
+                    </div>
+                    <h3>Guaraná Lata</h3>
+                    <p class="preco">R$ 4,00</p>
+                    <button class="btn-comprar" data-produto="Guaraná Lata" data-preco="4.00">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+                <div class="produto-card" data-categoria="refrigerantes">
+                    <div class="produto-image">
+                        <img src="src/image/168705-1200-auto.webp" alt="Sprite Lata">
+                    </div>
+                    <h3>Sprite Lata</h3>
+                    <p class="preco">R$ 4,00</p>
+                    <button class="btn-comprar" data-produto="Sprite Lata" data-preco="4.00">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <!-- Cervejas -->
+                <div class="produto-card" data-categoria="cervejas">
+                    <div class="produto-image">
+                        <img src="src/image/168385-1200-auto.webp" alt="Cerveja Skol Pilsen Lata 350ml">
+                    </div>
+                    <h3>Cerveja Skol Pilsen Lata 350ml</h3>
+                    <p class="preco">R$ 4,00</p>
+                    <div class="produto-opcoes">
+                        <div class="opcao-tipo">
+                            <label>
+                                <input type="radio" name="tipo-Cerveja Skol Pilsen Lata 350ml" value="unidade" checked>
+                                <span>Unidade</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="tipo-Cerveja Skol Pilsen Lata 350ml" value="fardo">
+                                <span>Fardo (12 un)</span>
+                            </label>
+                        </div>
+                        <p class="preco-fardo" style="display: none;">R$ 48,00</p>
+                    </div>
+                    <button class="btn-comprar" data-produto="Cerveja Skol Pilsen Lata 350ml" data-preco="4.00"
+                        data-fardo-preco="48.00" data-fardo-qtd="1">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <div class="produto-card" data-categoria="cervejas">
+                    <div class="produto-image">
+                        <img src="src/image/168357-1200-auto.webp" alt="Cerveja Brahma Chopp Pilsen Lata 350ml">
+                    </div>
+                    <h3>Cerveja Brahma Chopp Pilsen Lata 350ml</h3>
+                    <p class="preco">R$ 5,00</p>
+                    <div class="produto-opcoes">
+                        <div class="opcao-tipo">
+                            <label>
+                                <input type="radio" name="tipo-Cerveja Brahma Chopp Pilsen Lata 350ml" value="unidade"
+                                    checked>
+                                <span>Unidade</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="tipo-Cerveja Brahma Chopp Pilsen Lata 350ml" value="fardo">
+                                <span>Fardo (12 un)</span>
+                            </label>
+                        </div>
+                        <p class="preco-fardo" style="display: none;">R$ 60,00</p>
+                    </div>
+                    <button class="btn-comprar" data-produto="Cerveja Brahma Chopp Pilsen Lata 350ml" data-preco="5.00"
+                        data-fardo-preco="60.00" data-fardo-qtd="1">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+                <div class="produto-card" data-categoria="cervejas">
+                    <div class="produto-image">
+                        <img src="src/image/168145-1200-auto.webp" alt="Cerveja Heineken Lata 350ml">
+                    </div>
+                    <h3>Cerveja Heineken Lata 350ml</h3>
+                    <p class="preco">R$ 7,50</p>
+                    <div class="produto-opcoes">
+                        <div class="opcao-tipo">
+                            <label>
+                                <input type="radio" name="tipo-heineken-350ml" value="unidade" checked>
+                                <span>Unidade</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="tipo-heineken-350ml" value="fardo">
+                                <span>Fardo (12 un)</span>
+                            </label>
+                        </div>
+                        <p class="preco-fardo" style="display: none;">R$ 90,00</p>
+                    </div>
+                    <button class="btn-comprar" data-produto="Cerveja Heineken Lata 350ml" data-preco="7.50"
+                        data-fardo-preco="90.00" data-fardo-qtd="1">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+                <!-- Novas Cervejas Long Neck/Lata -->
+                <div class="produto-card" data-categoria="cervejas">
+                    <div class="produto-image">
+                        <img src="src/image/heineken-long-neck-24und-330ml-s81mk7wlcl.webp" alt="Heineken 330ml">
+                    </div>
+                    <h3>Heineken 330ml</h3>
+                    <p class="preco">R$ 7,50</p>
+                    <div class="produto-opcoes">
+                        <div class="opcao-tipo">
+                            <label>
+                                <input type="radio" name="tipo-heineken-330ml" value="unidade" checked>
+                                <span>Unidade</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="tipo-heineken-330ml" value="fardo">
+                                <span>Fardo (6 un)</span>
+                            </label>
+                        </div>
+                        <p class="preco-fardo" style="display: none;">R$ 45,00</p>
+                    </div>
+                    <button class="btn-comprar" data-produto="Heineken 330ml" data-preco="7.50" data-fardo-preco="45.00"
+                        data-fardo-qtd="1">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <div class="produto-card" data-categoria="cervejas">
+                    <div class="produto-image">
+                        <img src="src/image/197709_0.png" alt="Corona 330ml">
+                    </div>
+                    <h3>Corona 330ml</h3>
+                    <p class="preco">R$ 8,00</p>
+                    <div class="produto-opcoes">
+                        <div class="opcao-tipo">
+                            <label>
+                                <input type="radio" name="tipo-corona-330ml" value="unidade" checked>
+                                <span>Unidade</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="tipo-corona-330ml" value="fardo">
+                                <span>Fardo (6 un)</span>
+                            </label>
+                        </div>
+                        <p class="preco-fardo" style="display: none;">R$ 48,00</p>
+                    </div>
+                    <button class="btn-comprar" data-produto="Corona 330ml" data-preco="8.00" data-fardo-preco="48.00"
+                        data-fardo-qtd="1">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <div class="produto-card" data-categoria="cervejas">
+                    <div class="produto-image">
+                        <img src="src/image/202384_0.png" alt="Stella 330ml">
+                    </div>
+                    <h3>Stella 330ml</h3>
+                    <p class="preco">R$ 7,00</p>
+                    <div class="produto-opcoes">
+                        <div class="opcao-tipo">
+                            <label>
+                                <input type="radio" name="tipo-stella-330ml" value="unidade" checked>
+                                <span>Unidade</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="tipo-stella-330ml" value="fardo">
+                                <span>Fardo (6 un)</span>
+                            </label>
+                        </div>
+                        <p class="preco-fardo" style="display: none;">R$ 42,00</p>
+                    </div>
+                    <button class="btn-comprar" data-produto="Stella 330ml" data-preco="7.00" data-fardo-preco="42.00"
+                        data-fardo-qtd="1">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <div class="produto-card" data-categoria="cervejas">
+                    <div class="produto-image">
+                        <img src="src/image/6571c45a558925a4e88997f2.webp" alt="Budweiser 330ml">
+                    </div>
+                    <h3>Budweiser 330ml</h3>
+                    <p class="preco">R$ 6,50</p>
+                    <div class="produto-opcoes">
+                        <div class="opcao-tipo">
+                            <label>
+                                <input type="radio" name="tipo-budweiser-330ml" value="unidade" checked>
+                                <span>Unidade</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="tipo-budweiser-330ml" value="fardo">
+                                <span>Fardo (6 un)</span>
+                            </label>
+                        </div>
+                        <p class="preco-fardo" style="display: none;">R$ 39,00</p>
+                    </div>
+                    <button class="btn-comprar" data-produto="Budweiser 330ml" data-preco="6.50"
+                        data-fardo-preco="39.00" data-fardo-qtd="1">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <div class="produto-card" data-categoria="cervejas">
+                    <div class="produto-image">
+                        <img src="src/image/17420.webp" alt="Devassa Lata">
+                    </div>
+                    <h3>Devassa Lata 350ml</h3>
+                    <p class="preco">R$ 4,00</p>
+                    <div class="produto-opcoes">
+                        <div class="opcao-tipo">
+                            <label>
+                                <input type="radio" name="tipo-devassa-lata" value="unidade" checked>
+                                <span>Unidade</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="tipo-devassa-lata" value="fardo">
+                                <span>Fardo (12 un)</span>
+                            </label>
+                        </div>
+                        <p class="preco-fardo" style="display: none;">R$ 48,00</p>
+                    </div>
+                    <button class="btn-comprar" data-produto="Devassa Lata 350ml" data-preco="4.00"
+                        data-fardo-preco="48.00" data-fardo-qtd="1">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+                <div class="produto-card" data-categoria="cervejas">
+                    <div class="produto-image">
+                        <img src="src/image/bf33d89c87d6fff1d290c0791510c2d4.webp" alt="Boêmia Lata">
+                    </div>
+                    <h3>Boêmia Lata 350ml</h3>
+                    <p class="preco">R$ 4,00</p>
+                    <div class="produto-opcoes">
+                        <div class="opcao-tipo">
+                            <label>
+                                <input type="radio" name="tipo-boemia-lata" value="unidade" checked>
+                                <span>Unidade</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="tipo-boemia-lata" value="fardo">
+                                <span>Fardo (12 un)</span>
+                            </label>
+                        </div>
+                        <p class="preco-fardo" style="display: none;">R$ 48,00</p>
+                    </div>
+                    <button class="btn-comprar" data-produto="Boêmia Lata 350ml" data-preco="4.00"
+                        data-fardo-preco="48.00" data-fardo-qtd="1">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <!-- Cervejas Retornáveis -->
+                <div class="produto-card" data-categoria="cervejas">
+                    <div class="produto-image">
+                        <img src="src/image/7891149103300_2.webp" alt="Skol Retornável">
+                    </div>
+                    <h3>Skol Retornável</h3>
+                    <p class="preco">R$ 4,00</p>
+                    <div class="produto-opcoes">
+                        <div class="opcao-tipo">
+                            <label>
+                                <input type="radio" name="tipo-Skol-retornavel" value="unidade" checked>
+                                <span>Unidade</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="tipo-Skol-retornavel" value="fardo">
+                                <span>Caixa (23 un)</span>
+                            </label>
+                        </div>
+                        <p class="preco-fardo" style="display: none;">R$ 70,00</p>
+                    </div>
+                    <button class="btn-comprar" data-produto="Skol Retornável" data-preco="4.00"
+                        data-fardo-preco="70.00" data-fardo-qtd="1">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <div class="produto-card" data-categoria="cervejas">
+                    <div class="produto-image">
+                        <img src="src/image/65d346d0cf413c271110468a.webp" alt="Brahma Chopp Retornável">
+                    </div>
+                    <h3>Brahma Chopp Retornável</h3>
+                    <p class="preco">R$ 4,00</p>
+                    <div class="produto-opcoes">
+                        <div class="opcao-tipo">
+                            <label>
+                                <input type="radio" name="tipo-brahma-chopp-retornavel" value="unidade" checked>
+                                <span>Unidade</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="tipo-brahma-chopp-retornavel" value="fardo">
+                                <span>Caixa (23 un)</span>
+                            </label>
+                        </div>
+                        <p class="preco-fardo" style="display: none;">R$ 70,00</p>
+                    </div>
+                    <button class="btn-comprar" data-produto="Brahma Chopp Retornável" data-preco="4.00"
+                        data-fardo-preco="70.00" data-fardo-qtd="1">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <div class="produto-card" data-categoria="cervejas">
+                    <div class="produto-image">
+                        <img src="src/image/cerv_brahma_duplo_malte_300ml_24b709c7-ebea-4c3a-aaa6-1cf9dd6fd74b.jpg"
+                            alt="Brahma Duplo Malte Retornável">
+                    </div>
+                    <h3>Brahma Duplo Malte Retornável</h3>
+                    <p class="preco">R$ 4,50</p>
+                    <div class="produto-opcoes">
+                        <div class="opcao-tipo">
+                            <label>
+                                <input type="radio" name="tipo-brahma-duplo-malte-retornavel" value="unidade" checked>
+                                <span>Unidade</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="tipo-brahma-duplo-malte-retornavel" value="fardo">
+                                <span>Caixa (23 un)</span>
+                            </label>
+                        </div>
+                        <p class="preco-fardo" style="display: none;">R$ 75,00</p>
+                    </div>
+                    <button class="btn-comprar" data-produto="Brahma Duplo Malte Retornável" data-preco="4.50"
+                        data-fardo-preco="75.00" data-fardo-qtd="1">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <div class="produto-card" data-categoria="cervejas">
+                    <div class="produto-image">
+                        <img src="src/image/download.jpeg" alt="Boêmia Retornável">
+                    </div>
+                    <h3>Boêmia Retornável</h3>
+                    <p class="preco">R$ 4,00</p>
+                    <div class="produto-opcoes">
+                        <div class="opcao-tipo">
+                            <label>
+                                <input type="radio" name="tipo-boemia-retornavel" value="unidade" checked>
+                                <span>Unidade</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="tipo-boemia-retornavel" value="fardo">
+                                <span>Caixa (23 un)</span>
+                            </label>
+                        </div>
+                        <p class="preco-fardo" style="display: none;">R$ 70,00</p>
+                    </div>
+                    <button class="btn-comprar" data-produto="Boêmia Retornável" data-preco="4.00"
+                        data-fardo-preco="70.00" data-fardo-qtd="1">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <div class="produto-card" data-categoria="cervejas">
+                    <div class="produto-image">
+                        <img src="src/image/cerv_devassa_lager_300ml_retornavel_22272402-4c53-4775-b2a0-af7ad5570e01.jpg"
+                            alt="Devassa Retornável">
+                    </div>
+                    <h3>Devassa Retornável</h3>
+                    <p class="preco">R$ 4,00</p>
+                    <div class="produto-opcoes">
+                        <div class="opcao-tipo">
+                            <label>
+                                <input type="radio" name="tipo-devassa-retornavel" value="unidade" checked>
+                                <span>Unidade</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="tipo-devassa-retornavel" value="fardo">
+                                <span>Caixa (23 un)</span>
+                            </label>
+                        </div>
+                        <p class="preco-fardo" style="display: none;">R$ 70,00</p>
+                    </div>
+                    <button class="btn-comprar" data-produto="Devassa Retornável" data-preco="4.00"
+                        data-fardo-preco="70.00" data-fardo-qtd="1">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <div class="produto-card" data-categoria="cervejas">
+                    <div class="produto-image">
+                        <img src="src/image/90_cerveja_amstel_300ml_retornavel_guarrafa_liquido_492_1_7ec5a2ac8ba6b710a084dc205c96e052.webp"
+                            alt="Amstel Retornável">
+                    </div>
+                    <h3>Amstel Retornável</h3>
+                    <p class="preco">R$ 4,00</p>
+                    <div class="produto-opcoes">
+                        <div class="opcao-tipo">
+                            <label>
+                                <input type="radio" name="tipo-amstel-retornavel" value="unidade" checked>
+                                <span>Unidade</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="tipo-amstel-retornavel" value="fardo">
+                                <span>Caixa (23 un)</span>
+                            </label>
+                        </div>
+                        <p class="preco-fardo" style="display: none;">R$ 70,00</p>
+                    </div>
+                    <button class="btn-comprar" data-produto="Amstel Retornável" data-preco="4.00"
+                        data-fardo-preco="70.00" data-fardo-qtd="1">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+                <!-- Águas -->
+                <div class="produto-card" data-categoria="aguas">
+                    <div class="produto-image">
+                        <img src="src/image/171510-1200-auto.webp" alt="Água Mineral Crystal s/ Gás Pet 500ml">
+                    </div>
+                    <h3>Água Mineral Crystal s/ Gás Pet 500ml</h3>
+                    <p class="preco">R$ 2,00</p>
+                    <button class="btn-comprar" data-produto="Água Mineral Crystal s/ Gás Pet 500ml" data-preco="2.00">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <div class="produto-card" data-categoria="aguas">
+                    <div class="produto-image">
+                        <img src="src/image/190297-1200-auto.webp" alt="Água Mineral Crystal c/ Gás 500ml">
+                    </div>
+                    <h3>Água Mineral Crystal c/ Gás 500ml</h3>
+                    <p class="preco">R$ 3,50</p>
+                    <button class="btn-comprar" data-produto="Água Mineral Crystal c/ Gás 500ml" data-preco="2.50">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <!-- Energéticos / Drinks Prontos -->
+                <div class="produto-card" data-categoria="energeticos">
+                    <div class="produto-image">
+                        <img src="src/image/NIGTH-POWER-ENERGETICO-1024x1024.png" alt="Night Power 2L">
+                    </div>
+                    <h3>Night Power 2L</h3>
+                    <p class="preco">R$ 15,00</p>
+                    <button class="btn-comprar" data-produto="Night Power 2L" data-preco="15.00">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <div class="produto-card" data-categoria="energeticos">
+                    <div class="produto-image">
+                        <img src="src/image/210894-1200-auto.webp" alt="Bally Melancia 2L">
+                    </div>
+                    <h3>Bally Melancia 2L</h3>
+                    <p class="preco">R$ 20,00</p>
+                    <button class="btn-comprar" data-produto="Bally Melancia 2L" data-preco="20.00">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <div class="produto-card" data-categoria="energeticos">
+                    <div class="produto-image">
+                        <img src="src/image/210878-1200-auto.webp" alt="Bally Maçã Verde 2L">
+                    </div>
+                    <h3>Bally Maçã Verde 2L</h3>
+                    <p class="preco">R$ 20,00</p>
+                    <button class="btn-comprar" data-produto="Bally Maçã Verde 2L" data-preco="20.00">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <div class="produto-card" data-categoria="energeticos">
+                    <div class="produto-image">
+                        <img src="src/image/210181-1200-auto.webp" alt="Bally Tropical 2L">
+                    </div>
+                    <h3>Bally Tropical 2L</h3>
+                    <p class="preco">R$ 20,00</p>
+                    <button class="btn-comprar" data-produto="Bally Tropical 2L" data-preco="20.00">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <!-- Outros (Gelo e Água adicional) -->
+                <div class="produto-card" data-categoria="outros">
+                    <div class="produto-image">
+                        <i class="fas fa-snowflake" style="font-size: 4rem; color: #74b9ff;"></i>
+                    </div>
+                    <h3>Gelo</h3>
+                    <p class="preco">R$ 10,00</p>
+                    <button class="btn-comprar" data-produto="Gelo" data-preco="3.00">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <div class="produto-card" data-categoria="outros">
+                    <div class="produto-image">
+                        <i class="fas fa-tint" style="font-size: 4rem; color: #74b9ff;"></i>
+                    </div>
+                    <h3>Água</h3>
+                    <p class="preco">R$ 2,50</p>
+                    <button class="btn-comprar" data-produto="Água" data-preco="1.50">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <div class="produto-card" data-categoria="outros">
+                    <div class="produto-image">
+                        <i class="fas fa-fire" style="font-size: 4rem; color: #74b9ff;"></i>
+                    </div>
+                    <h3>Carvão</h3>
+                    <p class="preco">R$ 13,00</p>
+                    <button class="btn-comprar" data-produto="Carvão" data-preco="13.00">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <!-- Sucos -->
+                <!-- <div class="produto-card" data-categoria="sucos">
+                    <div class="produto-image">
+                        <img src="src/image/Tampico-Citricos-330ml-640w.webp" alt="Suco de Laranja 330ml">
+                    </div>
+                    <h3>Suco de Laranja 330ml</h3>
+                    <p class="preco">R$ 5,00</p>
+                    <button class="btn-comprar" data-produto="Suco de Laranja 300ml" data-preco="5.00">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <div class="produto-card" data-categoria="sucos">
+                    <div class="produto-image">
+                        <img src="src/image/641618---suco-del-valle-uva-300ml.webp" alt="Suco de Uva 300ml">
+                    </div>
+                    <h3>Suco de Uva 300ml</h3>
+                    <p class="preco">R$ 5,50</p>
+                    <button class="btn-comprar" data-produto="Suco de Uva 300ml" data-preco="5.50">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div> -->
+
+                <!-- Destilados - Vodka -->
+                <div class="produto-card" data-categoria="destilados">
+                    <div class="produto-image">
+                        <img src="src/image/178705-1200-auto.webp" alt="Smirnoff">
+                    </div>
+                    <h3>Smirnoff</h3>
+                    <p class="preco">R$ 50,00</p>
+                    <button class="btn-comprar" data-produto="Smirnoff" data-preco="50.00">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <div class="produto-card" data-categoria="destilados">
+                    <div class="produto-image">
+                        <img src="src/image/178957-1200-auto.webp" alt="Absolut">
+                    </div>
+                    <h3>Absolut</h3>
+                    <p class="preco">R$ 89,90</p>
+                    <button class="btn-comprar" data-produto="Absolut" data-preco="89.90">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <!-- Destilados - Gin -->
+                <div class="produto-card" data-categoria="destilados">
+                    <div class="produto-image">
+                        <img src="src/image/2748008117_1_xlarge.webp" alt="">
+                    </div>
+                    <h3>Gin Rocks</h3>
+                    <p class="preco">R$ 45,00</p>
+                    <button class="btn-comprar" data-produto="Gin Rocks" data-preco="45.00">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <div class="produto-card" data-categoria="destilados">
+                    <div class="produto-image">
+                        <img src="src/image/210157-1200-auto.webp" alt="">
+                    </div>
+                    <h3>Gin Beefeater</h3>
+                    <p class="preco">R$ 99,00</p>
+                    <button class="btn-comprar" data-produto="Gin Beefeater" data-preco="99.00">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <!-- Destilados - Whisky -->
+                <div class="produto-card" data-categoria="destilados">
+                    <div class="produto-image">
+                        <img src="src/image/whisky-black---white-1l-24aywoppos.webp" alt="Black & White">
+                    </div>
+                    <h3>Black & White</h3>
+                    <p class="preco">R$ 69,00</p>
+                    <button class="btn-comprar" data-produto="Black & White" data-preco="69.00">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <div class="produto-card" data-categoria="destilados">
+                    <div class="produto-image">
+                        <img src="src/image/29095838_1_xlarge.webp" alt="Red Label">
+                    </div>
+                    <h3>Red Label</h3>
+                    <p class="preco">R$ 89,90</p>
+                    <button class="btn-comprar" data-produto="Red Label" data-preco="89.90">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <div class="produto-card" data-categoria="destilados">
+                    <div class="produto-image">
+                        <img src="src/image/215596-1200-auto.webp" alt="Ballantine's">
+                    </div>
+                    <h3>Ballantine's</h3>
+                    <p class="preco">R$ 74,99</p>
+                    <button class="btn-comprar" data-produto="Ballantine's" data-preco="74.99">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <div class="produto-card" data-categoria="destilados">
+                    <div class="produto-image">
+                        <img src="src/image/259209-1.webp" alt="Jack Daniel's N° 7">
+                    </div>
+                    <h3>Jack Daniel's N° 7</h3>
+                    <p class="preco">R$ 130,00</p>
+                    <button class="btn-comprar" data-produto="Jack Daniel's N° 7" data-preco="130.00">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <div class="produto-card" data-categoria="destilados">
+                    <div class="produto-image">
+                        <img src="src/image/259206-1.webp" alt="Jack Daniel's Maçã Verde">
+                    </div>
+                    <h3>Jack Daniel's Maçã Verde</h3>
+                    <p class="preco">R$ 140,00</p>
+                    <button class="btn-comprar" data-produto="Jack Daniel's Maçã Verde" data-preco="140.00">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <div class="produto-card" data-categoria="destilados">
+                    <div class="produto-image">
+                        <img src="src/image/chivas-regal-whisky-12-anos-escoc-s-mgok3mke91.webp" alt="Chivas Regal">
+                    </div>
+                    <h3>Chivas Regal</h3>
+                    <p class="preco">R$ 130,00</p>
+                    <button class="btn-comprar" data-produto="Chivas Regal" data-preco="130.00">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <!-- Destilados - Cachaça -->
+                <div class="produto-card" data-categoria="destilados">
+                    <div class="produto-image">
+                        <img src="src/image/196375-1200-auto.webp" alt="Ypióca Ouro">
+                    </div>
+                    <h3>Ypióca Ouro</h3>
+                    <p class="preco">R$ 24,99</p>
+                    <button class="btn-comprar" data-produto="Ypióca Ouro" data-preco="24.99">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <div class="produto-card" data-categoria="destilados">
+                    <div class="produto-image">
+                        <img src="src/image/196409-1200-auto.webp" alt="Ypióca Prata">
+                    </div>
+                    <h3>Ypióca Prata</h3>
+                    <p class="preco">R$ 20,00</p>
+                    <button class="btn-comprar" data-produto="Ypióca Prata" data-preco="20.00">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <div class="produto-card" data-categoria="destilados">
+                    <div class="produto-image">
+                        <img src="src/image/c23c440b8d020cbc821ac04c51c612a6 (1).webp" alt="Cavalo Branco">
+                    </div>
+                    <h3>Cavalo Branco</h3>
+                    <p class="preco">R$ 74,99</p>
+                    <button class="btn-comprar" data-produto="Cavalo Branco" data-preco="74.99">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <!-- Vinhos -->
+                <div class="produto-card" data-categoria="vinhos">
+                    <div class="produto-image">
+                        <img src="src/image/Frame-4-3.webp" alt="Vinho São Braz">
+                    </div>
+                    <h3>Vinho São Braz</h3>
+                    <p class="preco">R$ 10,00</p>
+                    <button class="btn-comprar" data-produto="Vinho São Braz" data-preco="10.00">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+
+                <div class="produto-card" data-categoria="vinhos">
+                    <div class="produto-image">
+                        <img src="src/image/vinho-tinto-quinta-do-morgado-1l-u2ooljmkwm.webp"
+                            alt="Vinho Quinta do Morgado">
+                    </div>
+                    <h3>Vinho Quinta do Morgado</h3>
+                    <p class="preco">R$ 20,00</p>
+                    <button class="btn-comprar" data-produto="Vinho Quinta do Morgado" data-preco="20.00">
+                        <i class="fas fa-cart-plus"></i> Adicionar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <h2>Sobre o Geladão</h2>
+                    <p>Há mais de 10 anos servindo a comunidade com as melhores bebidas sempre geladas. Nosso geladão
+                        mantém todas as bebidas na temperatura ideal para refrescar seu dia.</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Bebidas sempre geladas</li>
+                        <li><i class="fas fa-check"></i> Preços justos</li>
+                        <li><i class="fas fa-check"></i> Atendimento de qualidade</li>
+                        <li><i class="fas fa-check"></i> Variedade de produtos</li>
+                    </ul>
+                </div>
+                <div class="sobre-image">
+                    <i class="fas fa-store"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <div class="contato-content">
+                <div class="contato-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Endereço</h3>
+                            <p>Rua Porto Príncipe, 817<br>Prq Santa Rosa -Fortaleza-Ce</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Telefone</h3>
+                            <p>+55 (85) 9964-21255</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Horário</h3>
+                            <p>Segunda a Domingo<br>8h às 22h</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contato-form">
+                    <form id="form-contato">
+                        <input type="text" placeholder="Seu nome" required>
+                        <input type="tel" placeholder="Seu telefone" required>
+                        <textarea placeholder="Sua mensagem" rows="5" required></textarea>
+                        <button type="submit" class="btn-primary">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="src/image/510305951_18052089899597905_1888439041580206738_n.jpg" alt="FJ Geladão Logo"
+                        style="height: 40px; width: auto; margin-right: 10px;">
+                    <h3>FJ Geladão</h3>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Início</a>
+                    <a href="#produtos">Produtos</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#contato">Contato</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/fjgeladaoo/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/558596647342?text=Quero+fazer+meu+pedido%21"><i
+                            class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Geladão. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Carrinho Modal -->
+    <div id="carrinho-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Seu Carrinho</h3>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="carrinho-items">
+                    <p style="text-align: center; color: #666;">Seu carrinho está vazio</p>
+                </div>
+
+                <!-- Opções de Entrega -->
+                <div class="entrega-opcoes">
+                    <h4><i class="fas fa-truck"></i> Opções de Entrega</h4>
+                    <div class="entrega-radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="entrega" value="retirada" checked>
+                            <span class="radio-custom"></span>
+                            <div class="option-info">
+                                <strong>Retirar no Local</strong>
+                                <small>Grátis - Rua Porto Príncipe, 817</small>
+                            </div>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="entrega" value="entrega">
+                            <span class="radio-custom"></span>
+                            <div class="option-info">
+                                <strong>Entrega em Domicílio</strong>
+                                <small>Taxa: R$ <span id="taxa-entrega">5,00</span></small>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Opções de Pagamento -->
+                <div class="pagamento-opcoes">
+                    <h4><i class="fas fa-credit-card"></i> Forma de Pagamento</h4>
+                    <div class="pagamento-radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="pagamento" value="dinheiro" checked>
+                            <span class="radio-custom"></span>
+                            <div class="option-info">
+                                <strong>Dinheiro</strong>
+                                <small>Pagamento na entrega/retirada</small>
+                            </div>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="pagamento" value="pix">
+                            <span class="radio-custom"></span>
+                            <div class="option-info">
+                                <strong>PIX</strong>
+                                <small>Pagamento instantâneo</small>
+                            </div>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="pagamento" value="cartao">
+                            <span class="radio-custom"></span>
+                            <div class="option-info">
+                                <strong>Cartão</strong>
+                                <small>Débito ou crédito na entrega</small>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Campo para troco (aparece apenas se dinheiro selecionado) -->
+                <div id="troco-section" class="troco-section" style="display: block;">
+                    <label for="troco-input">Troco para quanto?</label>
+                    <input type="number" id="troco-input" placeholder="Ex: 50,00" step="0.01" min="0">
+                </div>
+
+                <!-- Campo para endereço (aparece apenas se entrega selecionada) -->
+                <div id="endereco-section" class="endereco-section" style="display: none;">
+                    <label for="endereco-input">Endereço para entrega:</label>
+                    <textarea id="endereco-input" placeholder="Digite seu endereço completo..." rows="3"></textarea>
+                </div>
+
+                <div class="carrinho-resumo">
+                    <div class="resumo-linha">
+                        <span>Subtotal:</span>
+                        <span>R$ <span id="subtotal-preco">0,00</span></span>
+                    </div>
+                    <div class="resumo-linha" id="taxa-entrega-linha" style="display: none;">
+                        <span>Taxa de entrega:</span>
+                        <span>R$ <span id="valor-taxa-entrega">5,00</span></span>
+                    </div>
+                    <div class="resumo-linha total-linha">
+                        <strong>Total: R$ <span id="total-preco">0,00</span></strong>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-primary" id="finalizar-pedido">
+                    <i class="fas fa-whatsapp"></i> Finalizar Pedido
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/js/script.js"></script>
+</body>
+
+</html>
