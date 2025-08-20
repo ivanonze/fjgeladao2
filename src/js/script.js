@@ -31,6 +31,9 @@ function initializeApp() {
     setupPagamentoEntrega();
     // Salva os produtos estáticos do HTML para o painel de admin poder acessá-los
     salvarProdutosEstaticosParaAdmin();
+    // Adiciona um listener para detectar mudanças feitas no painel de admin em outras abas
+    window.addEventListener('storage', handleStorageChange);
+
     // Carrega produtos dinâmicos e aplica customizações
     carregarProdutosCadastrados();
     // As funções abaixo serão chamadas dentro de carregarProdutosCadastrados
@@ -347,6 +350,50 @@ function abrirCarrinho() {
     atualizarDisplayCarrinho();
 }
 
+function handleStorageChange(event) {
+    const chavesRelevantes = [
+        'fjgeladao_produtos',           // Para adicionar/editar/remover produtos dinâmicos
+        'fjgeladao_preco_sobrescrito',  // Para alterar preço de produtos estáticos
+        'fjgeladao_produtos_ocultos'    // Para ocultar produtos estáticos
+    ];
+
+    // Verifica se a chave alterada no localStorage é uma das que afetam os produtos
+    if (event.key && chavesRelevantes.includes(event.key)) {
+        console.log(`Atualização de produtos detectada (${event.key}). Recarregando a lista.`);
+        
+        // Notifica o usuário que a lista foi atualizada
+        mostrarNotificacao('A lista de produtos foi atualizada!', 'info');
+        
+        // Recarrega a grade de produtos para refletir as mudanças
+        recarregarGradeDeProdutos();
+    }
+}
+
+function recarregarGradeDeProdutos() {
+    // 1. Remove todos os produtos que foram adicionados dinamicamente pelo admin
+    document.querySelectorAll('.produto-card[data-produto-id^="dyn-"]').forEach(card => card.remove());
+
+    // 2. Reseta a visibilidade dos produtos estáticos (do HTML original).
+    // Isso garante que se um produto for "des-ocultado" no futuro, ele reaparecerá.
+    const produtosEstaticos = document.querySelectorAll('.produto-card:not([data-produto-id^="dyn-"])');
+    produtosEstaticos.forEach(card => {
+        card.style.display = 'block';
+        card.removeAttribute('data-produto-oculto');
+    });
+
+    // 3. Roda a lógica principal de carregamento novamente.
+    // Esta função irá ler os dados mais recentes do localStorage,
+    // adicionar os produtos dinâmicos corretos e aplicar as customizações (ocultar/mudar preço) nos estáticos.
+    carregarProdutosCadastrados();
+
+    // 4. Re-aplica o filtro de categoria que estava ativo para manter a visualização do usuário
+    const filtroAtivo = document.querySelector('.filtro-btn.active');
+    if (filtroAtivo) {
+        // Simula um clique no botão de filtro para re-filtrar a lista de produtos atualizada
+        filtroAtivo.click();
+    }
+}
+
 
 // Mostra notificação
 function mostrarNotificacao(mensagem, tipo = 'success') {
@@ -361,12 +408,24 @@ function mostrarNotificacao(mensagem, tipo = 'success') {
     notificacao.className = `notificacao ${tipo}`;
     notificacao.textContent = mensagem;
 
+    let corFundo;
+    switch (tipo) {
+        case 'error':
+            corFundo = '#e74c3c';
+            break;
+        case 'info':
+            corFundo = '#3498db'; // Um azul para notificações informativas
+            break;
+        default:
+            corFundo = '#00b894';
+    }
+
     // Estilos da notificação
     notificacao.style.cssText = `
         position: fixed;
         top: 100px;
         right: 20px;
-        background: ${tipo === 'error' ? '#e74c3c' : '#00b894'};
+        background: ${corFundo};
         color: white;
         padding: 15px 20px;
         border-radius: 10px;
@@ -718,3 +777,6 @@ function carregarProdutosCadastrados() {
     aplicarPrecosSobrescritos();
     aplicarProdutosOcultos();
 }
+
+
+
